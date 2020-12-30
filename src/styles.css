@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Product Sans", sans-serif;
+}
+
+body {
+  background-color: #2d3436;
+  color: white;
+}
+
+.vertical-spacing {
+  padding: 20px 0;
+}
+
+.horizontal-spacing {
+  padding: 0 20px;
+}
+
+.btn {
+  background: #222;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 30px;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.btn .btn-bar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn:hover .btn-bar {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
