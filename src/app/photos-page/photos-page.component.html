@@ -1,0 +1,33 @@
+<div class="photos-page">
+  <div class="vertical-spacing"></div>
+  <div class="photos-page-title-section">
+    <h1>Photos</h1>
+    <div class="btn" (click)="addPhoto()">
+      <span>Add</span>
+      <div class="btn-bar"></div>
+    </div>
+  </div>
+  <div class="vertical-spacing"></div>
+  <ng-container *ngFor="let photo of photos">
+    <div class="vertical-spacing"></div>
+    <div class="photo-block">
+      <div>
+        <h3>{{photo.title}}</h3>
+        <div class="vertical-spacing"></div>
+        <div class="photo-action-section">
+          <div class="btn photo-action-button" (click)="editPhoto(photo)">
+            <span>Edit</span>
+            <div class="btn-bar"></div>
+          </div>
+          <div class="horizontal-spacing"></div>
+          <div class="btn photo-action-button" (click)="removePhoto(photo.id)">
+            <span>Delete</span>
+            <div class="btn-bar"></div>
+          </div>
+        </div>
+      </div>
+      <img src="{{photo.thumbnailUrl}}" alt="">
+    </div>
+    <div class="vertical-spacing"></div>
+  </ng-container>
+</div>

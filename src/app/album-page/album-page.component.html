@@ -1,0 +1,15 @@
+<div class="album-page">
+  <div class="vertical-spacing"></div>
+  <h1>Albums</h1>
+  <div class="vertical-spacing"></div>
+  <div class="albums-section">
+    <ng-container *ngFor="let album of albums">
+      <div class="album-card" (click)="navigate(album.id)">
+        <div class="album-card-content">
+          <h3>{{album.title}}</h3>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

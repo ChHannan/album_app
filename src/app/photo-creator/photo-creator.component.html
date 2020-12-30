@@ -1,0 +1,40 @@
+<div class="photo-form-page">
+  <h1>{{isEditMode ? 'Edit' : 'Add'}} Photo</h1>
+  <div class="vertical-spacing"></div>
+  <form [formGroup]="photoForm" class="photo-form">
+    <div class="form-group field">
+      <input class="form-field" placeholder="Title" formControlName="photoTitle" id="title"/>
+      <label for="title" class="form-label">Title</label>
+    </div>
+    <div *ngIf="getPhotoTitle.invalid && (getPhotoTitle.dirty || getPhotoTitle.touched)"
+         class="error-alert">
+      <div *ngIf="getPhotoTitle.errors.required">
+        Title is required.
+      </div>
+      <div *ngIf="getPhotoTitle.errors.minlength">
+        Title should be at least 5 characters long.
+      </div>
+    </div>
+    <div class="vertical-spacing"></div>
+    <div class="form-group field">
+      <input class="form-field" placeholder="UrL" formControlName="photoUrl" id="url"/>
+      <label for="url" class="form-label">URL</label>
+    </div>
+    <div *ngIf="getPhotoUrl.invalid && (getPhotoUrl.dirty || getPhotoUrl.touched)"
+         class="error-alert">
+      <div *ngIf="getPhotoUrl.errors.required">
+        URL is required.
+      </div>
+      <div *ngIf="getPhotoUrl.errors.pattern">
+        URL should be valid.
+      </div>
+    </div>
+  </form>
+  <div class="vertical-spacing"></div>
+  <div class="vertical-spacing"></div>
+  <div class="btn" (click)="onSubmit()">
+    <span>{{isEditMode ? 'Update' : 'Add'}}</span>
+    <div class="btn-bar"></div>
+  </div>
+</div>
+

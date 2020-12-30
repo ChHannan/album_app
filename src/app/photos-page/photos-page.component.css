@@ -1,0 +1,40 @@
+.photos-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photos-page-title-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.photos-page-title-section h1 {
+  margin: 0;
+}
+
+.photo-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.photo-action-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.photo-action-button {
+  height: 40px;
+  min-width: 100px;
+  font-size: 20px;
+}
+
+.photo-action-button:hover .btn-bar {
+  width: 100px;
+}

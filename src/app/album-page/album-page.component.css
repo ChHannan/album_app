@@ -1,0 +1,28 @@
+.album-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.albums-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album-card {
+  background-color: #1D1D1DB3;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  flex: 0 0 30.33%;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.album-card-content {
+  padding: 2px 16px;
+}
